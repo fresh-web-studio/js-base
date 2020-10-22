@@ -8,6 +8,160 @@
     <title>Базовый курс JavaScript</title>
 </head>
 <body>
-
+<button onclick="task_1()">Задание 1</button>
+<button onclick="task_2()">Задание 2</button>
+<button onclick="task_3()">Задание 3</button>
+<button onclick="task_4()">Задание 4</button>
+<button onclick="task_5()">Задание 5</button>
+<button onclick="task_6()">Задание 6</button>
+<button onclick="task_7()">Задание 7</button>
+<button onclick="task_8()">Задание 8</button>
 </body>
+<script>
+    function task_1() {
+        console.log('    var a = 1, b = 1, c, d;\n' +
+            '    c = ++a; alert(c);           // 2, так как переменная а = 1 и ++а означает прибавь сначала к переменной а 1, то получается с = 1 + 1 = 2\n' +
+            '    c = ++a; alert(c);           // 2, так как переменная а = 1 и ++а означает прибавь сначала к переменной а 1, то получается с = 1 + 1 = 2\n' +
+            '    d = b++; alert(d);           // 1, тут наоборот, b = 1, переменная d = 1, но + 1 только в следующем случае использования переменной b, b =2\n' +
+            '    c = (2+ ++a); alert(c);      // 5, 2 + 2 (переменная а уже была увеличена на 1) + 1 = 5\n' +
+            '    d = (2+ b++); alert(d);      // 4, 2 + 2 (переменная b уже была увеличена на 1 то есть 1 + 1) = 4\n' +
+            '    alert(a);                    // 3, к этой строке переменная а уже 2 раза была увеличена на 1 (1+1+1=3)\n' +
+            '    alert(b);                    // 3, к этой строке переменная b уже 2 раза была увеличена на 1 (1+1+1=3)\n');
+    }
+
+    function task_2() {
+        var a = 2;
+        var x = 1 + (a *= 2);
+        console.log(x); //x = 1 + (2 * 2) = 5
+    }
+
+    function task_3() {
+        let a = +prompt('Введите целочисленную переменную a:');
+        let b = +prompt('Введите целочисленную переменную b:');
+        if (a >= 0 && b >= 0) {
+            let result = a - b;
+            console.log(result);
+        } else if (a < 0 && b < 0) {
+            let result = a * b;
+            console.log(result);
+        } else if ((a < 0 && b > 0) || (a > 0 && b < 0)) {
+            let result = a + b;
+            console.log(result);
+        }
+    }
+
+    function task_4() {
+        let a = +prompt('Введите число от 0 до 15');
+        switch (a) {
+            case 0:
+                console.log(a++);
+            case 1:
+                console.log(a++);
+            case 2:
+                console.log(a++);
+            case 3:
+                console.log(a++);
+            case 4:
+                console.log(a++);
+            case 5:
+                console.log(a++);
+            case 6:
+                console.log(a++);
+            case 7:
+                console.log(a++);
+            case 8:
+                console.log(a++);
+            case 9:
+                console.log(a++);
+            case 10:
+                console.log(a++);
+            case 11:
+                console.log(a++);
+            case 12:
+                console.log(a++);
+            case 13:
+                console.log(a++);
+            case 14:
+                console.log(a++);
+            case 15:
+                console.log(a++);
+        }
+    }
+
+    function task_5() {
+        let a = +prompt ('Введите переменную а:');
+        let b = +prompt ('Введите переменную b:');
+
+        function sum(a, b) {
+            return a + b;
+        }
+
+        function subtraction(a, b) {
+            return a - b;
+        }
+
+        function division(a, b) {
+            return a / b;
+        }
+
+        function multiplication(a, b) {
+            return a * b;
+        }
+
+        console.log(
+            'Сумма: ' + sum(a, b),
+            'Разность: ' + subtraction(a, b),
+            'Частное: ' + division(a, b),
+            'Произведение: ' + multiplication(a, b),
+        )
+    }
+
+    function task_6() {
+        let arg1 = +prompt ('Введите первый аргумент: ');
+        let arg2 = +prompt ('Введите второй аргумент: ');
+        let operation = prompt ('Введите название операции \n(варианты - сложение, вычитание, деление, умножение): ');
+        let total = mathOperation (arg1, arg2, operation)
+
+        function mathOperation (arg1, arg2, operation) {
+            switch (operation) {
+                case 'сложение':
+                    return arg1 + arg2;
+                    break;
+                case 'вычитание':
+                    return arg1 - arg2;
+                    break;
+                case 'деление':
+                    return arg1 / arg2;
+                    break;
+                case 'умножение':
+                    return arg1 * arg2;
+                    break;
+                default:
+                    console.log('Не верно введена операция!');
+            }
+        }
+        if (operation === 'сложение' || operation === 'вычитание' || operation === 'деление' || operation === 'умножение') {
+            console.log('Ответ: ' + total);
+        }
+    }
+
+    function task_7() {
+        console.log(
+            'null – тип данных null, значение "ничего". 0 – тип данных number, это число, то есть 0\n' +
+            'null > 0 или null == 0 выдаст false.\n' +
+            'null >= 0 ты выдаст true.'
+        )
+    }
+
+    function task_8() {
+        function power(val, pow) {
+            if (pow != 1) {
+                return val *= power(val, pow - 1);
+            } else {
+                return val;
+            }
+        }
+        console.log( power(5, 2)); // 25
+    }
+</script>
 </html>
