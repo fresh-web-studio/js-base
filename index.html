@@ -13,6 +13,8 @@
 <button onclick="task_3()">Задание 3</button>
 <button onclick="task_4()">Задание 4</button>
 <button onclick="task_5()">Задание 5</button>
+<button onclick="task_6()">Задание 6</button>
+<!--<button onclick="task_7()">Задание 7</button>-->
 </body>
 <script>
     function task_1() {
@@ -84,7 +86,63 @@
                 console.log(a++);
         }
     }
+
     function task_5() {
+        let a = +prompt ('Введите переменную а:');
+        let b = +prompt ('Введите переменную b:');
+
+        function sum(a, b) {
+            return a + b;
+        }
+
+        function subtraction(a, b) {
+            return a - b;
+        }
+
+        function division(a, b) {
+            return a / b;
+        }
+
+        function multiplication(a, b) {
+            return a * b;
+        }
+
+        console.log(
+            'Сумма: ' + sum(a, b),
+            'Разность: ' + subtraction(a, b),
+            'Частное: ' + division(a, b),
+            'Произведение: ' + multiplication(a, b),
+        )
+    }
+
+    function task_6() {
+        let arg1 = +prompt ('Введите первый аргумент: ');
+        let arg2 = +prompt ('Введите второй аргумент: ');
+        let operation = prompt ('Введите название операции \n(варианты - сложение, вычитание, деление, умножение): ');
+        let total = mathOperation (arg1, arg2, operation)
+
+        function mathOperation (arg1, arg2, operation) {
+            switch (operation) {
+                case 'сложение':
+                    return arg1 + arg2;
+                    break;
+                case 'вычитание':
+                    return arg1 - arg2;
+                    break;
+                case 'деление':
+                    return arg1 / arg2;
+                    break;
+                case 'умножение':
+                    return arg1 * arg2;
+                    break;
+                default:
+                    console.log('Не верная операция!');
+            }
+        }
+        console.log('Ответ: ' + total);
+    }
+
+    function task_7() {
 
     }
 
