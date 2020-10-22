@@ -136,10 +136,12 @@
                     return arg1 * arg2;
                     break;
                 default:
-                    console.log('Не верная операция!');
+                    console.log('Не верно введена операция!');
             }
         }
-        console.log('Ответ: ' + total);
+        if (operation === 'сложение' || operation === 'вычитание' || operation === 'деление' || operation === 'умножение') {
+            console.log('Ответ: ' + total);
+        }
     }
 
     function task_7() {
