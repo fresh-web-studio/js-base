@@ -104,3 +104,4 @@ function createItem(index) {
         productId: `prod_${index + 1}` //'prod_1'
     }
 }
+
