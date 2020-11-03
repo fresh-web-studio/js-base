@@ -46,37 +46,7 @@ const catalog = {
     }
 };
 
-const miniCart = {
-    items: [],
-    container: null,
-    init() {
-        this.container = document.querySelector('#miniCart');
-        this.items = getItemsMiniCart();
-        this._render();
-    },
-    _render() {
-        let htmlStr = '';
-
-        this.items.forEach((item, i) => {
-            htmlStr += `
-                        <div class="item_acc">
-                            <img class="img_acc" src="../src/assets/images/featuredItem${1 + i}.jpg" alt="1">
-                            <div class="center_item">
-                                <a class="a__item" href="single_page.html">${item.productName}</a>
-                                <img src="../src/assets/images/stars.png" alt="stars">
-                                <p class="price__pink">1 X &nbsp; $${item.productPrice}</p>
-                            </div>
-                            <div class="left_item">
-                                <a class="fa" href="#"><i class="fas fa-times-circle"></i></a>
-                            </div>
-                        </div>
-            `
-        });
-        this.container.innerHTML = htmlStr;
-    }
-};
 catalog.init();
-miniCart.init();
 
 function getItems() {
     let arr = [];
@@ -104,4 +74,3 @@ function createItem(index) {
         productId: `prod_${index + 1}` //'prod_1'
     }
 }
-
