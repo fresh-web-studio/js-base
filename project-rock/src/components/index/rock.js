@@ -12,7 +12,7 @@ function rock_game(user) {
             if ((this.user == 0 && this.terminator == 1) || (this.user == 1 && this.terminator == 2) || (this.user == 2 && this.terminator == 0)) {
                 this.winner = 'User';
             } else if (this.user == this.terminator) {
-                this.winner = 'Both';
+                this.winner = 'Ничья';
             } else {
                 this.winner = 'PC';
             }
