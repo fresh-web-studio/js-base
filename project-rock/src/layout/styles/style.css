@@ -1,0 +1,38 @@
+.center {
+    display: flex;
+    height: 100vh;
+}
+
+img {
+    cursor: pointer;
+}
+
+.rock, .scissors, .paper {
+    width: 10vw;
+    height: 10vw;
+    padding: 0.1vw;
+}
+
+.scissors, .paper {
+    margin-top: 3vw;
+}
+
+.rock {
+    margin-top: 2vw;
+}
+
+#field {
+    margin: auto;
+    justify-content: center;
+    align-content: center;
+    display: flex;
+    background-image: url(../../assets/images/base.svg);
+    background-size: 30vw;
+    width: 30vw;
+    height: 30vw;
+}
+#results {
+    margin: 9vw 0.5vw 1vw;
+    font-size: 0.9vw;
+    text-align: center;
+}

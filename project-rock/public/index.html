@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../src/layout/styles/style.css">
+    <title>Rock Game</title>
+</head>
+
+<body>
+<button onclick="document.location='../../index.html'">Назад</button>
+
+<div class="center">
+    <div id="field">
+        <div>
+            <img src="../src/assets/images/scissors.svg" alt="" class="scissors" onclick="rock_game(1)"/>
+        </div>
+        <div>
+            <div id="results">
+                <p>
+                    <strong>
+                        User:
+                    </strong>
+                    <span id="user-variant"></span>
+                </p>
+                <p>
+                    <strong>
+                        PC:
+                    </strong>
+                    <span id="pc-variant"></span>
+                </p>
+                <p id="score">
+                    <strong>
+                        Победил:<br>Человечество: <br>Терминатор:
+                    </strong>
+                </p>
+            </div>
+            <img src="../src/assets/images/rock.svg" alt="" class="rock" onclick="rock_game(0)"/>
+        </div>
+        <div>
+            <img src="../src/assets/images/paper.svg" alt="" class="paper" onclick="rock_game(2)"/>
+        </div>
+    </div>
+</div>
+<script src="../src/components/index/rock.js"></script>
+</body>
+</html>
